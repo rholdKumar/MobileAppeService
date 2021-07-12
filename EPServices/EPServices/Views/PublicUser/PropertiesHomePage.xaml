@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EPServices.Views.PublicUser.PropertiesHomePage" Title="Search" IconImageSource="propertyicon"
+             xmlns:sg="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    ios:Page.UseSafeArea="true" >
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10,0,10,0">
+            <Grid.RowDefinitions>
+                <!--<RowDefinition Height="40"/>-->
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+            <!--<StackLayout HeightRequest="40" Grid.Row="0" BackgroundColor="#E75B33">
+                <Label Text="Emirates Property" HorizontalTextAlignment="Center"/>
+            </StackLayout>-->
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <SearchBar Placeholder="Search Location" Grid.Row="0"/>
+                <sg:SegmentedControl x:Name="SegControl" TintColor="#E75B33" SelectedTextColor="#E75B33" DisabledColor="White" BackgroundColor="WhiteSmoke" SelectedSegment="0" Grid.Row="1" HeightRequest="30">
+                  <sg:SegmentedControl.Children>
+                    <sg:SegmentedControlOption Text="Rent" />
+                    <sg:SegmentedControlOption Text="Buy" />
+                  </sg:SegmentedControl.Children>
+                </sg:SegmentedControl>
+            </Grid>
+            <ScrollView Grid.Row="1" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <Image Source="samplepic" Grid.Row="0" Aspect="AspectFill"/>
+                <Image Source="samplepic" Grid.Row="1" Aspect="AspectFill"/>
+                <Image Source="samplepic" Grid.Row="2" Aspect="AspectFill"/> 
+            </Grid>
+                </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

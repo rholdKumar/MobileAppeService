@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "iM1l4msFK/IoEoQCcGP4BnnfyoMPMgsywH1BKhKP8qF5yg2JlT4cSzSAJYTiaMrn7sTKNzk2ZPYCNjJXX1ELuw==",
+  "success": true,
+  "projectFilePath": "/Users/kumaradabala/Projects/MobileAppeService/EPServices/EPServices.iOS/EPServices.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/kumaradabala/.nuget/packages/btprogresshud/1.3.2/btprogresshud.1.3.2.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/segmentedcontrol.formsplugin/2.0.1/segmentedcontrol.formsplugin.2.0.1.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/xamarin.essentials/1.3.1/xamarin.essentials.1.3.1.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/xamarin.forms/4.3.0.908675/xamarin.forms.4.3.0.908675.nupkg.sha512"
+  ],
+  "logs": []
+}

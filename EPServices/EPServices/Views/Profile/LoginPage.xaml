@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EPServices.Views.Profile.LoginPage"
+             xmlns:contr="clr-namespace:EPServices.Controls"
+             BackgroundColor="Transparent" Title="My Account" IconImageSource="user"
+              NavigationPage.HasNavigationBar="false">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary>
+                <OnIdiom x:Key="GridSize" x:TypeArguments="GridLength" Phone="200" Tablet="300" />
+            </ResourceDictionary>
+        </ResourceDictionary>
+        </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+        <Image Source="loginbg1.jpg" Grid.Row="0" Aspect="AspectFill"></Image>
+            <ScrollView  Grid.Row="0" VerticalOptions="FillAndExpand">
+        <Grid Padding="20,0,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+                 <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+             <Label Text="Emirates Properties" Grid.Row="1" HorizontalTextAlignment="Center" TextColor="{StaticResource btnbgColor}" FontAttributes="Bold" FontSize="30"/>
+            <contr:RoundedCornerView   Grid.Row="2" RowSpacing="5" BorderColor="Transparent" FillColor="Transparent"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                  <StackLayout Padding="10" >
+            <Grid BackgroundColor="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="auto" />
+                     <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto" />
+                      <RowDefinition Height="40"/>
+                     <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                
+                <Grid Grid.Row="0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                   
+                    <Label Text="Email" IsVisible="false" Opacity="1" Grid.Row="0" TextColor="White" FontAttributes="Bold"/>
+                    <contr:ImageEntry TextColor="White" FontAttributes="Bold" Text="{Binding Email}"
+                                    LineColor="White"
+                             PlaceholderColor="WhiteSmoke" 
+                            Image="mail"
+                                      ImageWidth="25"
+                                      ImageHeight="25"
+                                     
+                            Placeholder="Email" 
+                            HorizontalOptions="FillAndExpand" Grid.Row="1"/>
+                </Grid>
+                <Grid Grid.Row="2" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+              
+                <Label Text="Password" IsVisible="false" Grid.Row="0" TextColor="White" FontAttributes="Bold"/>
+                <contr:ImageEntry TextColor="White" FontAttributes="Bold" Text="{Binding Password}"
+                                    LineColor="White"
+                                  IsPassword="True"
+                             PlaceholderColor="WhiteSmoke" 
+                        Image="password"
+                                  ImageWidth="25"
+                                      ImageHeight="25"
+                                    
+                        Placeholder="Password" 
+                        HorizontalOptions="FillAndExpand" Grid.Row="1"/>
+                </Grid>
+                <Grid Grid.Row="4"> 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                         <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                     <Button HorizontalOptions="Start" Command="{Binding forgotPasswordCommand}" BackgroundColor="Transparent" Text="Forgot Password?"  TextColor="White" FontAttributes="Bold" Grid.Column="0" VerticalOptions="End" ></Button>
+                     <Button  Text="Sign In" Command="{Binding userAuthCommand}" BackgroundColor="{StaticResource btnbgColor}" FontAttributes="Bold" TextColor="White" Grid.Column="1" ></Button>
+                </Grid>
+                 <Grid Grid.Row="6"> 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                         <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                     <Button HorizontalOptions="Start" Command="{Binding forgotPasswordCommand}" BackgroundColor="Transparent" Text="Don't have an account sign up?" FontSize="Small"  TextColor="White" FontAttributes="Bold" Grid.Column="0" VerticalOptions="End" Font="20" ></Button>
+                     <Button  Text="Sign Up" Command="{Binding signUpCommand}" BackgroundColor="{StaticResource btnbgColor}" FontAttributes="Bold" TextColor="White" Grid.Column="1" ></Button>
+                </Grid>
+                
+
+            </Grid>
+                      </StackLayout>
+            </contr:RoundedCornerView>
+        </Grid>
+                </ScrollView>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>

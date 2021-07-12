@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EPServices.Views.Profile.UserSettingsPage" Title="About" IconImageSource="info"  xmlns:contr="clr-namespace:EPServices.Controls">
+    <ContentPage.Content>
+         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                 <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ScrollView Grid.Row="1">
+              <Grid  Padding="20" RowSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                         <RowDefinition Height="10"/>
+                         
+                         <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                   
+                   <contr:RoundedCornerView   Grid.Row="0" HeightRequest="40" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Customer Care" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="call" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                   </contr:RoundedCornerView>
+                  <contr:RoundedCornerView   Grid.Row="1" HeightRequest="40" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Customer Care Mail" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="arrowright" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                   </contr:RoundedCornerView>
+                   <contr:RoundedCornerView   Grid.Row="2" HeightRequest="40" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Terms and Conditions" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="arrowright" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                   </contr:RoundedCornerView>
+                   <contr:RoundedCornerView   Grid.Row="3" HeightRequest="40" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Emirates Properties" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="arrowright" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                   </contr:RoundedCornerView>
+                   <contr:RoundedCornerView   Grid.Row="4" HeightRequest="40" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Log Out" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="logout" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                   </contr:RoundedCornerView>
+                </Grid>
+                </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

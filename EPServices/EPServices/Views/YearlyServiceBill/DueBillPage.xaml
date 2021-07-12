@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EPServices.Views.YearlyServiceBill.DueBillPage" xmlns:contr="clr-namespace:EPServices.Controls"
+               Title="Due Bill">
+    <ContentPage.Content>
+      <Grid BackgroundColor="LightGray">
+          <Grid.RowDefinitions>
+              <RowDefinition Height="4*"/>
+              <RowDefinition Height="6*"/>
+          </Grid.RowDefinitions>
+          <contr:GradientLayout Grid.Row="0" VerticalOptions="FillAndExpand"
+    ColorsList="#f19d85,#e96b47,#ec7c5c,#e75b33"
+    Mode="ToBottom">
+
+    <!-- Your content -->
+
+</contr:GradientLayout>
+         <BoxView Grid.Row="1" VerticalOptions="FillAndExpand" BackgroundColor="LightGray"></BoxView>
+          <Grid VerticalOptions="FillAndExpand" Grid.Row="0" Grid.RowSpan="2" Padding="10,0,10,0">
+              <Grid.RowDefinitions>
+                  <RowDefinition Height="30"/>
+                  <RowDefinition Height="*"/>
+                
+              </Grid.RowDefinitions>
+              <!--<Grid Grid.Row="1">
+                  <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="3*" />
+                      <ColumnDefinition Width="7*" />
+                  </Grid.ColumnDefinitions>
+                   <Label Grid.Column="0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="White">
+                         <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Year: " TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                                <Span Text="2020" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                     </Label>
+                   <Label Grid.Column="1" FontSize="16" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="3425.56" FontAttributes="Bold" TextColor="White">
+                         <Label.FormattedText>
+                            <FormattedString>
+                                
+                                <Span Text="AED" TextColor="White" FontSize="10" />
+                                <Span Text="3425.56" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                     </Label>
+              </Grid>-->
+              <ScrollView Grid.Row="1" VerticalOptions="FillAndExpand">
+                  <StackLayout>
+                     <contr:RoundedCornerView  HeightRequest="230" Grid.Row="2" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="White"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                         <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+                         <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="10" >
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="30"/>
+                            <RowDefinition Height="20"/>
+                           <RowDefinition Height="40"/>
+                           <RowDefinition Height="50"/>
+                           <RowDefinition Height="1"/>
+                           <RowDefinition Height="50"/>
+                       </Grid.RowDefinitions>
+                          <Label Grid.Row="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"  >
+                                 <Label.FormattedText>
+                                    <FormattedString>
+                                
+                                        <Span Text="Lavender Tower - " TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                                        <Span Text="2036A" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                          </Label>
+                         <Label Grid.Row="1" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="DUE AMOUNT" TextColor="Gray" FontSize="10"/>
+                        <Label Grid.Row="2"  VerticalTextAlignment="Start" HorizontalTextAlignment="Start" >
+                             <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                    <Span Text="3425.56" TextColor="#737373" FontSize="35" FontAttributes="Bold"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                       </Label>
+                      
+                       <Grid Grid.Row="3">
+                           <Grid.ColumnDefinitions>
+                               <ColumnDefinition Width="5*"/>
+                               <ColumnDefinition Width="5*"/>
+                           </Grid.ColumnDefinitions>
+                           <Grid.RowDefinitions>
+                               <RowDefinition Height="20" />
+                                <RowDefinition Height="30"  />
+                           </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="TOTAL AMOUNT" TextColor="Gray" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" >
+                                     <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                            <Span Text="3425.56" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                               </Label>
+                                <Label Grid.Row="0" Grid.Column="1" Margin="0,0,0,-5" HorizontalOptions="EndAndExpand" VerticalTextAlignment="End" Text="DUE DATE" TextColor="Gray" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="25-11-2020" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" >
+                                    
+                               </Label>
+                       </Grid>
+                       <BoxView Grid.Row="4" Margin="-10,0,-10,0" BackgroundColor="LightGray" HorizontalOptions="FillAndExpand"/>
+                        <Grid Grid.Row="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="6*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="payicon" WidthRequest="20"  Aspect="AspectFit"/>
+                                 <Label Text="PAY BILL" Grid.Column="1" TextColor="DarkCyan" VerticalTextAlignment="Center"/>
+                            </Grid>
+                           
+                             <Label  Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="End" >
+                                     <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                            <Span Text="3425.56" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                               </Label>
+                        </Grid>
+                    </Grid>
+                             </StackLayout>
+                    <contr:RoundedCornerView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BillDetailsCommand}" CommandParameter="1"  />
+                    </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+                     <contr:RoundedCornerView HeightRequest="230"  Grid.Row="3" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="White"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                          <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+                         <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="10" >
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="30"/>
+                            <RowDefinition Height="20"/>
+                           <RowDefinition Height="40"/>
+                           <RowDefinition Height="50"/>
+                           <RowDefinition Height="1"/>
+                           <RowDefinition Height="50"/>
+                       </Grid.RowDefinitions>
+                          <Label Grid.Row="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"  >
+                                 <Label.FormattedText>
+                                    <FormattedString>
+                                
+                                        <Span Text="Lavender Tower - " TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                                        <Span Text="1011A" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                          </Label>
+                         <Label Grid.Row="1" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="DUE AMOUNT" TextColor="Gray" FontSize="10"/>
+                        <Label Grid.Row="2"  VerticalTextAlignment="Start" HorizontalTextAlignment="Start" >
+                             <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                    <Span Text="23415.00" TextColor="#737373" FontSize="35" FontAttributes="Bold"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                       </Label>
+                      
+                       <Grid Grid.Row="3">
+                           <Grid.ColumnDefinitions>
+                               <ColumnDefinition Width="5*"/>
+                               <ColumnDefinition Width="5*"/>
+                           </Grid.ColumnDefinitions>
+                           <Grid.RowDefinitions>
+                               <RowDefinition Height="20" />
+                                <RowDefinition Height="30"  />
+                           </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="TOTAL AMOUNT" TextColor="Gray" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" >
+                                     <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                            <Span Text="53415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                               </Label>
+                                <Label Grid.Row="0" Grid.Column="1" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="DUE DATE" HorizontalOptions="EndAndExpand" TextColor="Gray" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="25-11-2020" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" HorizontalOptions="EndAndExpand">
+                                    
+                               </Label>
+                       </Grid>
+                       <BoxView Grid.Row="4" Margin="-10,0,-10,0" BackgroundColor="LightGray" HorizontalOptions="FillAndExpand"/>
+                        <Grid Grid.Row="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="6*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="payicon" WidthRequest="20"  Aspect="AspectFit"/>
+                                 <Label Text="PAY BILL" Grid.Column="1" TextColor="DarkCyan" VerticalTextAlignment="Center"/>
+                            </Grid>
+                             <Label  Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="End" >
+                                     <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                            <Span Text="23415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                               </Label>
+                        </Grid>
+                    </Grid>
+                              </StackLayout>
+                    <contr:RoundedCornerView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BillDetailsCommand}" CommandParameter="1" />
+                    </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+                      <contr:RoundedCornerView HeightRequest="230"  Grid.Row="3" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="White"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                           <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+                    <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="10" >
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="30"/>
+                            <RowDefinition Height="20"/>
+                           <RowDefinition Height="40"/>
+                           <RowDefinition Height="50"/>
+                           <RowDefinition Height="1"/>
+                           <RowDefinition Height="50"/>
+                       </Grid.RowDefinitions>
+                          <Label Grid.Row="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"  >
+                                 <Label.FormattedText>
+                                    <FormattedString>
+                                
+                                        <Span Text="Lavender Tower - " TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                                        <Span Text="3031A" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                          </Label>
+                         <Label Grid.Row="1" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="DUE AMOUNT" TextColor="Gray" FontSize="10"/>
+                        <Label Grid.Row="2"  VerticalTextAlignment="Start" HorizontalTextAlignment="Start" >
+                             <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                    <Span Text="23415.00" TextColor="#737373" FontSize="35" FontAttributes="Bold"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                       </Label>
+                      
+                       <Grid Grid.Row="3">
+                           <Grid.ColumnDefinitions>
+                               <ColumnDefinition Width="5*"/>
+                               <ColumnDefinition Width="5*"/>
+                           </Grid.ColumnDefinitions>
+                           <Grid.RowDefinitions>
+                               <RowDefinition Height="20" />
+                                <RowDefinition Height="30"  />
+                           </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="TOTAL AMOUNT" TextColor="Gray" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" >
+                                     <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                            <Span Text="53415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                               </Label>
+                                <Label Grid.Row="0" Grid.Column="1" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="DUE DATE" HorizontalOptions="EndAndExpand" TextColor="Gray" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="25-11-2020" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" HorizontalOptions="EndAndExpand">
+                                    
+                               </Label>
+                       </Grid>
+                       <BoxView Grid.Row="4" Margin="-10,0,-10,0" BackgroundColor="LightGray" HorizontalOptions="FillAndExpand"/>
+                        <Grid Grid.Row="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="6*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="payicon" WidthRequest="20"  Aspect="AspectFit"/>
+                                 <Label Text="PAY BILL" Grid.Column="1" TextColor="DarkCyan" VerticalTextAlignment="Center"/>
+                            </Grid>
+                             <Label  Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="End" >
+                                     <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                            <Span Text="23415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                               </Label>
+                        </Grid>
+                    </Grid>
+                               </StackLayout>
+                    <contr:RoundedCornerView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BillDetailsCommand}" CommandParameter="1" />
+                    </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+
+                      <contr:RoundedCornerView HeightRequest="230"  Grid.Row="3" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="White"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                           <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+                    <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="10" >
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="30"/>
+                            <RowDefinition Height="20"/>
+                           <RowDefinition Height="40"/>
+                           <RowDefinition Height="50"/>
+                           <RowDefinition Height="1"/>
+                           <RowDefinition Height="50"/>
+                       </Grid.RowDefinitions>
+                          <Label Grid.Row="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"  >
+                                 <Label.FormattedText>
+                                    <FormattedString>
+                                
+                                        <Span Text="Lavender Tower - " TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                                        <Span Text="1011A" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                          </Label>
+                         <Label Grid.Row="1" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="DUE AMOUNT" TextColor="Gray" FontSize="10"/>
+                        <Label Grid.Row="2"  VerticalTextAlignment="Start" HorizontalTextAlignment="Start" >
+                             <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                    <Span Text="23415.00" TextColor="#737373" FontSize="35" FontAttributes="Bold"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                       </Label>
+                      
+                       <Grid Grid.Row="3">
+                           <Grid.ColumnDefinitions>
+                               <ColumnDefinition Width="5*"/>
+                               <ColumnDefinition Width="5*"/>
+                           </Grid.ColumnDefinitions>
+                           <Grid.RowDefinitions>
+                               <RowDefinition Height="20" />
+                                <RowDefinition Height="30"  />
+                           </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="TOTAL AMOUNT" TextColor="Gray" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" >
+                                     <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                            <Span Text="53415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                               </Label>
+                                <Label Grid.Row="0" Grid.Column="1" Margin="0,0,0,-5" VerticalTextAlignment="End" Text="DUE DATE" HorizontalOptions="EndAndExpand" TextColor="Gray" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="25-11-2020" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" HorizontalOptions="EndAndExpand">
+                                    
+                               </Label>
+                       </Grid>
+                       <BoxView Grid.Row="4" Margin="-10,0,-10,0" BackgroundColor="LightGray" HorizontalOptions="FillAndExpand"/>
+                        <Grid Grid.Row="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                           <Grid Grid.Column="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="6*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="payicon" WidthRequest="20"  Aspect="AspectFit"/>
+                                 <Label Text="PAY BILL" Grid.Column="1" TextColor="DarkCyan" VerticalTextAlignment="Center"/>
+                            </Grid>
+                             <Label  Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="End" >
+                                     <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                            <Span Text="23415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                               </Label>
+                        </Grid>
+                    </Grid>
+                               </StackLayout>
+                    <contr:RoundedCornerView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BillDetailsCommand}" CommandParameter="1" />
+                    </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+                      </StackLayout> 
+              </ScrollView>
+            
+          </Grid>
+      </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

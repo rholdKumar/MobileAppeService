@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "WDb/mV3MVsTYxLMQpKGwMzJkSDT8CrMmTKEa0GmmqYDoM1AZi9/RKNHa+IjFMjS8fxp/0TPd4fif4S3hnIoyWQ==",
+  "success": true,
+  "projectFilePath": "/Users/kumaradabala/Projects/MobileAppeService/EPServices/EPServices/EPServices.csproj",
+  "expectedPackageFiles": [
+    "/Users/kumaradabala/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/segmentedcontrol.formsplugin/2.0.1/segmentedcontrol.formsplugin.2.0.1.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/xamarin.essentials/1.3.1/xamarin.essentials.1.3.1.nupkg.sha512",
+    "/Users/kumaradabala/.nuget/packages/xamarin.forms/4.3.0.908675/xamarin.forms.4.3.0.908675.nupkg.sha512"
+  ],
+  "logs": []
+}

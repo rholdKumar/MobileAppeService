@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EPServices.Views.YearlyServiceBill.InvoiceHistoryPage"
+             xmlns:contr="clr-namespace:EPServices.Controls" xmlns:sg="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+               Title="Invoice History">
+    <ContentPage.Content>
+      <Grid BackgroundColor="LightGray">
+          <Grid.RowDefinitions>
+              <RowDefinition Height="4*"/>
+              <RowDefinition Height="6*"/>
+          </Grid.RowDefinitions>
+          <contr:GradientLayout Grid.Row="0" VerticalOptions="FillAndExpand"
+    ColorsList="#f19d85,#e96b47,#ec7c5c,#e75b33"
+    Mode="ToBottom">
+
+    <!-- Your content -->
+
+</contr:GradientLayout>
+         <BoxView Grid.Row="1" VerticalOptions="FillAndExpand" BackgroundColor="LightGray"></BoxView>
+          <Grid VerticalOptions="FillAndExpand" Grid.Row="0" Grid.RowSpan="2" Padding="10,0,10,0">
+              <Grid.RowDefinitions>
+                  <RowDefinition Height="30"/>
+                  <RowDefinition Height="*"/>
+                
+              </Grid.RowDefinitions>
+             
+              <ScrollView Grid.Row="1" VerticalOptions="FillAndExpand">
+                  <StackLayout>
+                     <contr:RoundedCornerView  HeightRequest="160" Grid.Row="2" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="White"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                         <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+                         <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="10" >
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                       </Grid.RowDefinitions>
+                             <Grid Grid.Row="0" Padding="0,0,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Invoice Number" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Text="EP534545657657" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Date" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start" Text="20-06-2020" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                             </Grid>
+                             <Grid Grid.Row="1" Padding="0,5,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Property Name" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" >
+                                      <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Lavender Tower - " TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                                            <Span Text="2036A" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                      </Label.FormattedText>
+                                     </Label>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Billing Year " TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 
+
+                                 <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" Text="2020" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                               
+
+                                    </Grid>
+                              <Grid Grid.Row="2">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Online Payment" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" >
+                                      <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                                <Span Text="23415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                  </Label>
+                                  <Label Text="Paid by Online" TextColor="Green" Grid.Column="1" Grid.Row="1" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                                 <Grid Grid.Row="1" Grid.Column="2" HorizontalOptions="End">
+                                     <Grid.ColumnDefinitions>
+                                         
+                                         <ColumnDefinition Width="20"/>
+                                         <ColumnDefinition Width="*"/>
+                                     </Grid.ColumnDefinitions>
+                                    
+                                     <Image Source="moreicon" Grid.Column="0" Aspect="AspectFit"/>
+                                      <Button Text="Details" HorizontalOptions="Start"  Grid.Column="1" />
+                                 </Grid>
+                                
+                             </Grid>
+                         
+                    </Grid>
+                             </StackLayout>
+                    <contr:RoundedCornerView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BillDetailsCommand}" CommandParameter="1"  />
+                    </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+                      <contr:RoundedCornerView  HeightRequest="160" Grid.Row="2" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="White"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                         <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+                         <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="10" >
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                       </Grid.RowDefinitions>
+                             <Grid Grid.Row="0" Padding="0,0,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Invoice Number" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Text="EP534545657657" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Date" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start" Text="20-06-2020" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                             </Grid>
+                             <Grid Grid.Row="1" Padding="0,5,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Property Name" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" >
+                                      <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Lavender Tower - " TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                                            <Span Text="2036A" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                      </Label.FormattedText>
+                                     </Label>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Billing Year " TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 
+
+                                 <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" Text="2020" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                               
+
+                                    </Grid>
+                               <Grid Grid.Row="2">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Online Payment" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" >
+                                      <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                                <Span Text="23415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                  </Label>
+                                  <Label Text="Paid by cheque" TextColor="Green" Grid.Column="1" Grid.Row="1" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                                 <Grid Grid.Row="1" Grid.Column="2" HorizontalOptions="End">
+                                     <Grid.ColumnDefinitions>
+                                         
+                                         <ColumnDefinition Width="20"/>
+                                         <ColumnDefinition Width="*"/>
+                                     </Grid.ColumnDefinitions>
+                                    
+                                     <Image Source="moreicon" Grid.Column="0" Aspect="AspectFit"/>
+                                      <Button Text="Details" HorizontalOptions="Start"  Grid.Column="1" />
+                                 </Grid>
+                                
+                             </Grid>
+                         
+                    </Grid>
+                             </StackLayout>
+                    <contr:RoundedCornerView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BillDetailsCommand}" CommandParameter="1"  />
+                    </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+                       <contr:RoundedCornerView  HeightRequest="160" Grid.Row="2" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="White"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                         <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+                         <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="10" >
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                       </Grid.RowDefinitions>
+                             <Grid Grid.Row="0" Padding="0,0,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Invoice Number" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Text="EP534545657657" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Bill Year" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start" Text="20-06-2020" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                             </Grid>
+                             <Grid Grid.Row="1" Padding="0,5,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Property Name" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" >
+                                      <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Lavender Tower - " TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                                            <Span Text="2036A" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                      </Label.FormattedText>
+                                     </Label>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Date " TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 
+
+                                 <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" Text="2020" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                               
+
+                                    </Grid>
+                              <Grid Grid.Row="2">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Online Payment" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" >
+                                      <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                                <Span Text="23415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                  </Label>
+                                  <Label Text="Failed Transaction" LineBreakMode="TailTruncation" TextColor="Red" Grid.Column="1" Grid.Row="1" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                                 <Grid Grid.Row="1" Grid.Column="2" HorizontalOptions="End">
+                                     <Grid.ColumnDefinitions>
+                                         
+                                         <ColumnDefinition Width="20"/>
+                                         <ColumnDefinition Width="*"/>
+                                     </Grid.ColumnDefinitions>
+                                    
+                                     <Image Source="moreicon" Grid.Column="0" Aspect="AspectFit"/>
+                                      <Button Text="Details" HorizontalOptions="Start"  Grid.Column="1" />
+                                 </Grid>
+                                
+                             </Grid>
+                         
+                    </Grid>
+                             </StackLayout>
+                    <contr:RoundedCornerView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BillDetailsCommand}" CommandParameter="1"  />
+                    </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+
+                       <contr:RoundedCornerView  HeightRequest="160" Grid.Row="2" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="White"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                         <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+                         <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="10" >
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                       </Grid.RowDefinitions>
+                             <Grid Grid.Row="0" Padding="0,0,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Invoice Number" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Text="EP534545657657" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Bill Year" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start" Text="20-06-2020" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                             </Grid>
+                             <Grid Grid.Row="1" Padding="0,5,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Property Name" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" >
+                                      <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Lavender Tower - " TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                                            <Span Text="2036A" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                      </Label.FormattedText>
+                                     </Label>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Date " TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 
+
+                                 <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" Text="2020" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                               
+
+                                    </Grid>
+                              <Grid Grid.Row="2">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Online Payment" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" >
+                                      <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                                <Span Text="23415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                  </Label>
+                                  <Label Text="Cheque pending clearance" LineBreakMode="TailTruncation" TextColor="Red" Grid.Column="1" Grid.Row="1" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                                 <Grid Grid.Row="1" Grid.Column="2" HorizontalOptions="End">
+                                     <Grid.ColumnDefinitions>
+                                         
+                                         <ColumnDefinition Width="20"/>
+                                         <ColumnDefinition Width="*"/>
+                                     </Grid.ColumnDefinitions>
+                                    
+                                     <Image Source="moreicon" Grid.Column="0" Aspect="AspectFit"/>
+                                      <Button Text="Details" HorizontalOptions="Start"  Grid.Column="1" />
+                                 </Grid>
+                                
+                             </Grid>
+                         
+                    </Grid>
+                             </StackLayout>
+                    <contr:RoundedCornerView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BillDetailsCommand}" CommandParameter="1"  />
+                    </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+                       <contr:RoundedCornerView  HeightRequest="160" Grid.Row="2" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="White"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                         <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+                         <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="10" >
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                       </Grid.RowDefinitions>
+                             <Grid Grid.Row="0" Padding="0,0,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Invoice Number" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Text="EP534545657657" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Bill Year" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start" Text="20-06-2020" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                             </Grid>
+                             <Grid Grid.Row="1" Padding="0,5,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Property Name" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" >
+                                      <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Lavender Tower - " TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                                            <Span Text="2036A" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                      </Label.FormattedText>
+                                     </Label>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Date " TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 
+
+                                 <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" Text="2020" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                               
+
+                                    </Grid>
+                              <Grid Grid.Row="2">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"/>
+                                      <RowDefinition Height="*"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Online Payment" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" >
+                                      <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                                <Span Text="23415.00" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                  </Label>
+                                 <Label Text="Paid by Cash" TextColor="Green" Grid.Column="1" Grid.Row="1" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                                 <Grid Grid.Row="1" Grid.Column="2" HorizontalOptions="End">
+                                     <Grid.ColumnDefinitions>
+                                         
+                                         <ColumnDefinition Width="20"/>
+                                         <ColumnDefinition Width="*"/>
+                                     </Grid.ColumnDefinitions>
+                                    
+                                     <Image Source="moreicon" Grid.Column="0" Aspect="AspectFit"/>
+                                      <Button Text="Details" HorizontalOptions="Start"  Grid.Column="1" />
+                                 </Grid>
+                                
+                             </Grid>
+                         
+                    </Grid>
+                             </StackLayout>
+                    <contr:RoundedCornerView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BillDetailsCommand}" CommandParameter="1"  />
+                    </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+                      </StackLayout> 
+              </ScrollView>
+            
+          </Grid>
+      </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

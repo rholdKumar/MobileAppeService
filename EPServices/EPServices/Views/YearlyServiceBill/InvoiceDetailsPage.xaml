@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EPServices.Views.YearlyServiceBill.InvoiceDetailsPage"
+              xmlns:sg="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+             Title="Invoice Details">
+        <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Service Charge Detials"
+                 IconImageSource="share.png"
+                 Order="Primary"
+                 Priority="0" />
+</ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid BackgroundColor="#F7F7F7">
+            <Grid.RowDefinitions>
+                 <RowDefinition Height="20"/>
+                  <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                  <RowDefinition Height="30"/>
+                 <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Image Source="billedge" Aspect="AspectFill" VerticalOptions="EndAndExpand" Margin="0,0,0,-10" Grid.Row="1"/>
+            <StackLayout Grid.Row="2" BackgroundColor="White">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                         <RowDefinition Height="1"/>
+                         <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+               
+                <Label Grid.Row="0" Text="PAYMENT PAID SUCCESSFULLY" TextColor="Green" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                <BoxView Grid.Row="1" BackgroundColor="Gray" WidthRequest="1"/>
+                <StackLayout Grid.Row="2" Padding="10,0,10,0">
+                <StackLayout  WidthRequest="40" Orientation="Horizontal">
+                    <Label Text="Payment Mode" FontAttributes="Bold" VerticalOptions="Center"  HorizontalTextAlignment="Start"/>
+                      <Label Text="Online Payment" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <StackLayout  WidthRequest="40" Orientation="Horizontal">
+                    <Label Text="Property Name" VerticalOptions="Center" FontAttributes="Bold"  HorizontalTextAlignment="Start"/>
+                      <Label Text="Lavender Tower" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <StackLayout  WidthRequest="40" Orientation="Horizontal">
+                    <Label Text="Unit" FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Start"/>
+                      <Label Text="2034" VerticalOptions="Center"  HorizontalOptions="EndAndExpand" />
+               </StackLayout>
+                <StackLayout  WidthRequest="40" Orientation="Horizontal">
+                    <Label Text="Invoice Number" FontAttributes="Bold" VerticalOptions="Center"  HorizontalTextAlignment="Start"/>
+                      <Label Text="EP4235334534" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <StackLayout WidthRequest="40" Orientation="Horizontal">
+                    <Label Text="Billing Year" FontAttributes="Bold"  VerticalOptions="Center" HorizontalTextAlignment="Start"/>
+                      <Label Text="2020"  VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+               <StackLayout  WidthRequest="40" Orientation="Horizontal">
+                    <Label Text="Paid On" FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Start"/>
+                      <Label Text="20-06-2020" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+               <StackLayout  WidthRequest="40" Orientation="Horizontal" BackgroundColor="WhiteSmoke">
+                    <Grid HorizontalOptions="StartAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="moreicon" Grid.Column="0" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <Label Text="Service Charge Amount" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="Center"/>
+                         
+                    </Grid>
+                  
+                      <Label  HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="End" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED"  FontSize="10" />
+                                    <Span Text="53425.56" FontSize="18" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                      </Label>
+                     <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenServiceDetailsCommand}"   />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout  IsVisible="{Binding isServiceDetails}">
+                    <Grid Padding="20,0,20,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                 <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Service Name" TextColor="Black" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                            
+                            <Label Grid.Row="0" Grid.Column="1" Text="Amount" TextColor="Black" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                 <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Service 1" TextColor="Gray" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                            
+                            <Label Grid.Row="0" Grid.Column="1" Text="1000.00" TextColor="Gray"  VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                 <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Service 2" TextColor="Gray" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                            
+                            <Label Grid.Row="0" Grid.Column="1" Text="4000.00" TextColor="Gray"  VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                    </Grid>
+                </StackLayout>
+                 <StackLayout  WidthRequest="40" Orientation="Horizontal" BackgroundColor="WhiteSmoke">
+                    <Grid HorizontalOptions="StartAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="moreicon" Grid.Column="0" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <Label Text="Paid Amount" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="Center"/>
+                         
+                    </Grid>
+                  
+                      <Label  HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="End" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED"  FontSize="10" />
+                                    <Span Text="1000.00" FontSize="18" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                      </Label>
+                      <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PaidAmountCommand}"   />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Grid.Row="11"  IsVisible="{Binding isPaidAmounts}">
+                   <Grid Padding="20,0,20,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                 <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Date" TextColor="Black" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                            
+                            <Label Grid.Row="0" Grid.Column="1" Text="Amount" TextColor="Black" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                 <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="20-06-2020" TextColor="Gray" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                            
+                            <Label Grid.Row="0" Grid.Column="1" Text="500.00" TextColor="Gray"  VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                 <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="13-07-2020" TextColor="Gray" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                            
+                            <Label Grid.Row="0" Grid.Column="1" Text="500.00" TextColor="Gray"  VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                    </Grid>
+                </StackLayout>
+                <StackLayout  WidthRequest="40" Orientation="Horizontal">
+                    <Label Text="Tax Amount" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                      <Label Grid.Column="1" HorizontalOptions="EndAndExpand" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED"  FontSize="10" />
+                                    <Span Text="0.00" FontSize="18" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                      </Label>
+               </StackLayout>
+               <StackLayout  WidthRequest="40" Orientation="Horizontal">
+                    <Label Text="Paymnet Status" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                      <Label Text="Paid Successfully" TextColor="Green" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="EndAndExpand" />
+                      
+                </StackLayout>
+
+                    </StackLayout>
+                 </Grid>
+               
+                   
+            </StackLayout>
+             <Image Source="billedge" Aspect="AspectFill" VerticalOptions="EndAndExpand" Margin="0,-10,0,0" Grid.Row="3" Rotation="180" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

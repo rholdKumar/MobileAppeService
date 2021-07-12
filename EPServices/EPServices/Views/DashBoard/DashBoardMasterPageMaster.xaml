@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EPServices.Views.DashBoard.DashBoardMasterPageMaster"  IconImageSource="menu"  BackgroundColor="{StaticResource backgroungColor}" Title="ep">
+    <StackLayout BackgroundColor="{StaticResource backgroungColor}">
+        <ListView Margin="10,0,10,0" x:Name="MenuItemsListView" ItemSelected="MenuItemsListView_ItemSelected"   SeparatorVisibility="None" HasUnevenRows="true" ItemsSource="{Binding MenuItems}" BackgroundColor="{StaticResource backgroungColor}" RowHeight="50">
+            <ListView.Header>
+                <Grid BackgroundColor="{StaticResource btnbgColor}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120" />
+                        <RowDefinition Height="30" />
+                       
+                    </Grid.RowDefinitions>
+                 <!--<StackLayout Padding="40" Grid.Column="1" Grid.Row="0" >
+                        <Frame CornerRadius="20" 
+                               Padding="0"
+                               IsClippedToBounds="True">
+                            <Image Source="user" 
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                        </Frame>
+                    </StackLayout>-->
+                    <Image Source="defaultuser" Aspect="AspectFit"  Grid.Column="1" Grid.Row="0"/>
+                    <Label Grid.Column="1" Grid.Row="1" HorizontalTextAlignment="Center" Text="Kumar Adabala" TextColor="White" FontAttributes="Bold" Style="{DynamicResource SubtitleStyle}" />
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding imgName}"  />
+                              <Label Grid.Column="1" TextColor="White" FontAttributes="Bold" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding Title}" FontSize="18" />
+                        </Grid>
+                   
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

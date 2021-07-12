@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EPServices.Views.Profile.MyProfilePage" Title="Profile"
+             xmlns:contr="clr-namespace:EPServices.Controls" IconImageSource="tabuser">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                 <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ScrollView Grid.Row="1">
+              <Grid  Padding="20" RowSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                         <RowDefinition Height="10"/>
+                         
+                         <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                   <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="My Profile" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                       
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="First Name" VerticalOptions="End" VerticalTextAlignment="End" TextColor="Gray"/>
+                        <Label Grid.Row="1" Text="Kumar" VerticalOptions="Start" VerticalTextAlignment="Start"/>
+                    </Grid>
+                  <Grid Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Last Name" VerticalOptions="End" VerticalTextAlignment="End" TextColor="Gray"/>
+                        <Label Grid.Row="1" Text="Adabala" VerticalOptions="Start" VerticalTextAlignment="Start"/>
+                    </Grid>
+                  <Grid Grid.Row="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Email Id" VerticalOptions="End" VerticalTextAlignment="End" TextColor="Gray"/>
+                        <Label Grid.Row="1" Text="Kumar@gmail.com" VerticalOptions="Start" VerticalTextAlignment="Start"/>
+                    </Grid>
+                  <Grid Grid.Row="4">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Contact Number" VerticalOptions="End" VerticalTextAlignment="End" TextColor="Gray"/>
+                        <Label Grid.Row="1" Text="0525665713" VerticalOptions="Start" VerticalTextAlignment="Start"/>
+                    </Grid>
+                  <Grid Grid.Row="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Emirates Id" VerticalOptions="End" VerticalTextAlignment="End" TextColor="Gray"/>
+                        <Label Grid.Row="1" Text="654-37234237" VerticalOptions="Start" VerticalTextAlignment="Start"/>
+                    </Grid>
+                   <contr:RoundedCornerView   Grid.Row="7" HeightRequest="40" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Change Password" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="arrowright" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                   </contr:RoundedCornerView>
+                  <contr:RoundedCornerView   Grid.Row="8" HeightRequest="40" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Your Units" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="arrowright" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                   </contr:RoundedCornerView>
+                   <contr:RoundedCornerView   Grid.Row="9" HeightRequest="40" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Transition History" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="arrowright" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                   </contr:RoundedCornerView>
+                   <contr:RoundedCornerView   Grid.Row="10" HeightRequest="40" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Wishlist" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="arrowright" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                   </contr:RoundedCornerView>
+                   <contr:RoundedCornerView   Grid.Row="11" HeightRequest="40" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Log Out" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="logout" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                   </contr:RoundedCornerView>
+                </Grid>
+                </ScrollView>
+        </Grid>
+      
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EPServices.Views.YearlyServiceBill.BillDetailsPage"
+             xmlns:sg="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+             Title="Bill Details">
+    <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Service Charge Detials"
+                 IconImageSource="servicecharge.png"
+                 Order="Primary"
+                 Priority="0" />
+</ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid BackgroundColor="#F7F7F7">
+            <Grid.RowDefinitions>
+                 <RowDefinition Height="20"/>
+                  <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                  <RowDefinition Height="30"/>
+                 <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Image Source="billedge" Aspect="AspectFill" VerticalOptions="EndAndExpand" Margin="0,0,0,-10" Grid.Row="1"/>
+            <Grid Grid.Row="2" BackgroundColor="White" Padding="10,0,10,0">
+               <Grid.RowDefinitions>
+                   <RowDefinition Height="30"/>
+                      <RowDefinition Height="1"/>
+                     <RowDefinition Height="40"/>
+                   <RowDefinition Height="40"/>
+                   <RowDefinition Height="40"/>
+                   <RowDefinition Height="40"/>
+                   <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                   <RowDefinition Height="80"/>
+                   <RowDefinition Height="40"/>
+                   <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+               </Grid.RowDefinitions>
+                <Label Text="BILL SUMMARY" Grid.Row="0" TextColor="Gray"/>
+                <BoxView BackgroundColor="Gray" Grid.Row="1"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                         <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Property Name" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                      <Label Text="Lavender Tower" Grid.Column="1" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                         <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Unit" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                      <Label Text="2034" Grid.Column="1" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                         <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Invoice Number" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                      <Label Text="EP4235334534" Grid.Column="1" HorizontalOptions="EndAndExpand" />
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                         <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Service Charge Amount" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                      <Label Grid.Column="1" HorizontalOptions="EndAndExpand" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED"  FontSize="10" />
+                                    <Span Text="53425.56" FontSize="18" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                      </Label>
+                </Grid>
+                 <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                         <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Paid Amount" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                      <Label Grid.Column="1" HorizontalOptions="EndAndExpand" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED"  FontSize="10" />
+                                    <Span Text="10000.56" FontSize="18" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                      </Label>
+                </Grid>
+                 <Grid Grid.Row="7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                         <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Due Amount" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                      <Label Grid.Column="1" HorizontalOptions="EndAndExpand" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED"  FontSize="10" />
+                                    <Span Text="43425.00" FontSize="18" FontAttributes="Bold"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                      </Label>
+                </Grid>
+                <StackLayout Grid.Row="8">
+                    <sg:SegmentedControl x:Name="SegControl" ValueChanged="SegControl_ValueChanged" TintColor="#E75B33" SelectedTextColor="#E75B33" DisabledColor="White" BackgroundColor="WhiteSmoke" SelectedSegment="0" Grid.Row="1" HeightRequest="30">
+                  <sg:SegmentedControl.Children>
+                    <sg:SegmentedControlOption Text="Full Amount" />
+                    <sg:SegmentedControlOption Text="Min Amount" />
+                      <sg:SegmentedControlOption Text="Other Amount" />
+                  </sg:SegmentedControl.Children>
+                </sg:SegmentedControl>
+                    <StackLayout x:Name="slContent" Padding="10,0,10,0" >
+                        <Grid Grid.Row="7">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                 <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Amount" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                              <Label x:Name="lblFullAmount" Grid.Column="1" HorizontalOptions="EndAndExpand" >
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                
+                                            <Span Text="AED"  FontSize="10" />
+                                            <Span Text="43425.00" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                              </Label>
+                            <Label x:Name="lblminAmount" Grid.Column="1" HorizontalOptions="EndAndExpand" IsVisible="false" >
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                
+                                            <Span Text="AED"  FontSize="10" />
+                                            <Span Text="1000.00" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                              </Label>
+                            <Entry x:Name="txtOtherAmount"  Keyboard="Numeric" Grid.Column="1" HorizontalOptions="FillAndExpand" IsVisible="false" />
+                          </Grid>
+                    </StackLayout>
+                </StackLayout>
+                <Grid Grid.Row="9" Padding="10,0,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                         <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Tax Amount" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                      <Label Grid.Column="1" HorizontalOptions="EndAndExpand" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED"  FontSize="10" />
+                                    <Span Text="00.00" FontSize="18" FontAttributes="Bold"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                      </Label>
+                </Grid>
+                <Grid Grid.Row="10" Padding="10,0,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                         <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Total Amount" FontAttributes="Bold" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                      <Label Grid.Column="1" HorizontalOptions="EndAndExpand" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                
+                                    <Span Text="AED"  FontSize="10" />
+                                    <Span Text="43425.00" FontSize="18" FontAttributes="Bold"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                      </Label>
+                </Grid>
+                <Grid Grid.Row="11" Padding="10,0,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                         <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Text="Pay" FontAttributes="Bold"  Grid.Column="1" BackgroundColor="{StaticResource btnbgColor}" TextColor="White" Clicked="Button_Clicked" />
+                </Grid>
+                   
+            </Grid>
+             <Image Source="billedge" Aspect="AspectFill" VerticalOptions="EndAndExpand" Margin="0,-10,0,0" Grid.Row="3" Rotation="180" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

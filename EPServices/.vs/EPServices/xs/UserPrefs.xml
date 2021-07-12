@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{F2C3EF1A-7F91-49AE-A7D0-E4366760ADB0}|Default">
+  <MonoDevelop.Ide.ItemProperties.EPServices.Android AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EPServices/ServiceLayer/ServicesManagementSL.cs">
+    <Files>
+      <File FileName="EPServices/ServiceLayer/ServicesManagementSL.cs" Line="14" Column="123" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EPServices" expanded="True">
+            <Node name="EPServices" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Hepler" expanded="True" />
+              <Node name="ServiceLayer" expanded="True">
+                <Node name="ServicesManagementSL.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.EPServices.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8A94576E-246B-4CAE-AA53-C404F328C7EE" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

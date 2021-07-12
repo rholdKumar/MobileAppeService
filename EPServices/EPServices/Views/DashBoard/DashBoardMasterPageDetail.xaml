@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EPServices.Views.DashBoard.DashBoardMasterPageDetail" Title="Home" IconImageSource="home"
+              xmlns:contr="clr-namespace:EPServices.Controls">
+    <StackLayout>
+        
+        <Grid Padding="20" VerticalOptions="FillAndExpand">
+      <Grid.RowDefinitions>
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+       </Grid.RowDefinitions>
+        
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="5*" />
+        <ColumnDefinition Width="5*" />
+      </Grid.ColumnDefinitions>
+           <contr:RoundedCornerView   Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" RowSpacing="5" BorderColor="Transparent" FillColor="#82469C"  BorderWidth="1"   RoundedCornerRadius="8">
+             <Grid  BackgroundColor="#82469C" >
+                 <Grid.RowDefinitions>
+                     <RowDefinition Height="2*"/>
+                     <RowDefinition Height="2*"/>
+                     <RowDefinition Height="2*"/>
+                     <RowDefinition Height="2*"/>
+                     <RowDefinition Height="2*"/>
+                 </Grid.RowDefinitions>
+                 <Grid.ColumnDefinitions>
+                     <ColumnDefinition  Width="3.5*"/>
+                     <ColumnDefinition Width="6.5*"/>
+                 </Grid.ColumnDefinitions>
+                 <Image Source="defaultuser" Margin="10,0,0,0" Aspect="AspectFill" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5"/>
+                 <Grid Grid.Row="0" Grid.Column="1" >
+                     <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="4*" />
+                             <ColumnDefinition Width="6*" />
+                     </Grid.ColumnDefinitions>
+                     <Label Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="Name :" FontAttributes="Bold" TextColor="White"/>
+                     <Label Grid.Column="1" FontSize="16" VerticalTextAlignment="Center" Text="Deepak" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="White"/>
+                 </Grid>
+                 <Grid Grid.Row="1" Grid.Column="1">
+                     <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="4*" />
+                             <ColumnDefinition Width="6*" />
+                     </Grid.ColumnDefinitions>
+                     <Label Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="Email :" FontAttributes="Bold" TextColor="WhiteSmoke"/>
+                     <Label Grid.Column="1" FontSize="16" VerticalTextAlignment="Center" Text="deepak@gmail.com" FontAttributes="Bold" TextColor="White"/>
+                 </Grid>
+                 <Grid Grid.Row="2" Grid.Column="1">
+                     <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="4*" />
+                             <ColumnDefinition Width="6*" />
+                     </Grid.ColumnDefinitions>
+                     <Label Grid.Column="0" FontSize="20" Text="Total :" VerticalTextAlignment="Center" HorizontalTextAlignment="End"  FontAttributes="Bold" TextColor="White">
+                         
+                     </Label>
+                     <Label Grid.Column="1" FontSize="16" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="" FontAttributes="Bold" TextColor="White">
+                         <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="AED" TextColor="White" FontSize="10" />
+                    <Span Text="249587.56" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                </FormattedString>
+            </Label.FormattedText>
+                     </Label>
+                 </Grid>
+                  <Grid Grid.Row="3" Grid.Column="1">
+                     <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="4*" />
+                             <ColumnDefinition Width="6*" />
+                     </Grid.ColumnDefinitions>
+                     <Label Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="Paid :" FontAttributes="Bold" TextColor="WhiteSmoke"/>
+                     <Label Grid.Column="1" FontSize="16" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="3425.56" FontAttributes="Bold" TextColor="White">
+                         <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="AED" TextColor="White" FontSize="10" />
+                    <Span Text="3425.56" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                </FormattedString>
+            </Label.FormattedText>
+                     </Label>
+                 </Grid>
+                  <Grid Grid.Row="4" Grid.Column="1">
+                     <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="4*" />
+                             <ColumnDefinition Width="6*" />
+                     </Grid.ColumnDefinitions>
+                     <Label Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="Due :" FontAttributes="Bold" TextColor="WhiteSmoke"/>
+                     <Label Grid.Column="1" FontSize="16" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Text="2345.00" FontAttributes="Bold" TextColor="White">
+                         <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="AED" TextColor="White" FontSize="10" />
+                    <Span Text="2345.00" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                </FormattedString>
+            </Label.FormattedText>
+                     </Label>
+                      <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding DueBillCommand}" />
+            </Grid.GestureRecognizers>
+                 </Grid>
+             </Grid>
+                
+               </contr:RoundedCornerView>
+        <contr:RoundedCornerView   Grid.Row="1" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="#D44F3E"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+              <Grid VerticalOptions="FillAndExpand" BackgroundColor="#D44F3E" >
+               <Grid.RowDefinitions>
+                   <RowDefinition Height="8*"/>
+                   <RowDefinition Height="2*"/>
+               </Grid.RowDefinitions>
+               <Image Grid.Row="0"  Opacity="0.8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="payment" Aspect="AspectFit" Margin="5" />
+                  <Label Text="Due Bills" FontSize="20" Grid.Row="1" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Start" VerticalOptions="Start" HorizontalTextAlignment="Center"/>
+                   </Grid>
+            <contr:RoundedCornerView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding DueBillCommand}" />
+            </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+          <contr:RoundedCornerView  Opacity="1" Grid.Row="1" Grid.Column="1" RowSpacing="5" BorderColor="Transparent" FillColor="#DC8F18"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                <Grid VerticalOptions="FillAndExpand" BackgroundColor="#DC8F18"  >
+               <Grid.RowDefinitions>
+                   <RowDefinition Height="8*"/>
+                   <RowDefinition Height="2*"/>
+               </Grid.RowDefinitions>
+               <Image Grid.Row="0"  Opacity="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="history" Aspect="AspectFit" Margin="5" />
+                  <Label Text="Invoice History" FontSize="20" Grid.Row="1" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Start" VerticalOptions="Start" HorizontalTextAlignment="Center"/>
+                   </Grid>
+              
+               <contr:RoundedCornerView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding InvoiceHistoryCommand}" />
+            </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+
+         <contr:RoundedCornerView   Grid.Row="2" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="#408CC5"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+              <Grid VerticalOptions="FillAndExpand" BackgroundColor="#408CC5">
+               <Grid.RowDefinitions>
+                   <RowDefinition Height="8*"/>
+                   <RowDefinition Height="2*"/>
+               </Grid.RowDefinitions>
+               <Image Grid.Row="0"  Opacity="0.8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="account" Aspect="AspectFit" Margin="5" />
+                  <Label Text="Easy Pay" FontSize="20" Grid.Row="1" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Start" VerticalOptions="Start" HorizontalTextAlignment="Center"/>
+                   </Grid>
+               </contr:RoundedCornerView>
+            <contr:RoundedCornerView   Grid.Row="2" Grid.Column="1" RowSpacing="5" BorderColor="Transparent" FillColor="#874FA1"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+             <Grid VerticalOptions="FillAndExpand" BackgroundColor="#874FA1">
+               <Grid.RowDefinitions>
+                   <RowDefinition Height="8*"/>
+                   <RowDefinition Height="2*"/>
+               </Grid.RowDefinitions>
+               <Image Grid.Row="0"  Opacity="0.8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="user" Aspect="AspectFit" Margin="5" />
+                  <Label Text="Easy Pay History" FontSize="20" Grid.Row="1" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Start" VerticalOptions="Start" HorizontalTextAlignment="Center"/>
+                   </Grid>
+               </contr:RoundedCornerView>
+
+
+            <contr:RoundedCornerView   Grid.Row="3" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="#528C38"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+               <Grid VerticalOptions="FillAndExpand" BackgroundColor="#528C38" >
+               <Grid.RowDefinitions>
+                   <RowDefinition Height="8*"/>
+                   <RowDefinition Height="2*"/>
+               </Grid.RowDefinitions>
+               <Image Grid.Row="0"  Opacity="0.8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="sr" Aspect="AspectFit" Margin="5" />
+                  <Label Text="Service Request" FontSize="20" Grid.Row="1" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Start" VerticalOptions="Start" HorizontalTextAlignment="Center"/>
+                   </Grid>
+               </contr:RoundedCornerView>
+
+        
+          <contr:RoundedCornerView   Grid.Row="3" Grid.Column="1" RowSpacing="5" BorderColor="Transparent" FillColor="#3E516A"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+               <Grid VerticalOptions="FillAndExpand" BackgroundColor="#3E516A">
+               <Grid.RowDefinitions>
+                   <RowDefinition Height="8*"/>
+                   <RowDefinition Height="2*"/>
+               </Grid.RowDefinitions>
+               <Image Grid.Row="0"  Opacity="0.8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="history" Aspect="AspectFit" Margin="5" />
+                  <Label Text="SR History" FontSize="20" Grid.Row="1" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Start" VerticalOptions="Start" HorizontalTextAlignment="Center"/>
+                   </Grid>
+               </contr:RoundedCornerView>
+    </Grid>
+    </StackLayout>
+    
+</ContentPage>
