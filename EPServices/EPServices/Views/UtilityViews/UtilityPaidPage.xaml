@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:contr="clr-namespace:EPServices.Controls" Title="Paid History" BackgroundColor="{StaticResource PageBGColor}"
+    x:Class="EPServices.Views.UtilityViews.UtilityPaidPage">
+    <ContentPage.Content>
+         <Grid VerticalOptions="FillAndExpand" Grid.Row="0" Grid.RowSpan="2" Padding="0,0,0,0">
+              <Grid.RowDefinitions>
+                  <RowDefinition Height="*"/>
+              </Grid.RowDefinitions>
+                  <StackLayout Grid.Row="0">
+                      <CollectionView x:Name="collectionList" ItemsSource="{Binding utilityModels}" Margin="5"  SelectionMode="Single" SelectionChangedCommand="{Binding SelectedItemCommand}" SelectionChangedCommandParameter="{Binding SelectedItem, Source={RelativeSource Self}}"  >    
+                            <CollectionView.ItemTemplate>    
+                                <DataTemplate>
+                                    <Grid >
+                                        <Grid.RowDefinitions>
+                                             <RowDefinition Height="2"/>
+                                             <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="2"/>
+                                        </Grid.RowDefinitions>
+                                                  <contr:RoundedCornerView   Grid.Row="1" Grid.Column="0" RowSpacing="5" BorderColor="Transparent" FillColor="White"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                         <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+                         <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="10" >
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                       </Grid.RowDefinitions>
+                             <Grid Grid.Row="0" Padding="0,0,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="auto"/>
+                                      <RowDefinition Height="auto"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Invoice Number" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Text="{Binding InvoiceNo}" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Date" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                  <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start" Text="{Binding DueDate, StringFormat='{0:dd/MM/yyyy}'}"  TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                             </Grid>
+                             <Grid Grid.Row="1" Padding="0,5,0,5">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="auto"/>
+                                      <RowDefinition Height="auto"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="7*"/>
+                                      <ColumnDefinition Width="3*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Property Name" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" >
+                                      <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding PropertyName}" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                                            <Span Text=" - " TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                            <Span Text="{Binding UnitName}" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                      </Label.FormattedText>
+                                     </Label>
+                                  <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Billing Year " TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 
+
+                                 <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" Text="{Binding BillPeriod}" TextColor="#737373" FontSize="18" FontAttributes="Bold" />
+                               
+
+                                    </Grid>
+                              <Grid Grid.Row="2">
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="auto"/>
+                                      <RowDefinition Height="auto"/>
+                                 </Grid.RowDefinitions>
+                                 <Grid.ColumnDefinitions>
+                                     <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                      <ColumnDefinition Width="*"/>
+                                 </Grid.ColumnDefinitions>
+                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" Text="Online Payment" TextColor="Silver" FontSize="12" FontAttributes="Bold"/>
+                                 <Label Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" >
+                                      <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="AED" TextColor="#737373" FontSize="10" />
+                                                <Span Text="{Binding TotalAmount}" TextColor="#737373" FontSize="18" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                  </Label>
+                                  <Label Text="{Binding PaymentStatus}" TextColor="Green" Grid.Column="1" Grid.Row="1" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                                 <Grid Grid.Row="1" Grid.Column="2" HorizontalOptions="End">
+                                     <Grid.ColumnDefinitions>
+                                         
+                                         <ColumnDefinition Width="20"/>
+                                         <ColumnDefinition Width="*"/>
+                                     </Grid.ColumnDefinitions>
+                                    
+                                     <Image Source="moreicon" Grid.Column="0" Aspect="AspectFit"/>
+                                      <Button Text="Details" HorizontalOptions="Start"  Grid.Column="1" />
+                                 </Grid>
+                                
+                             </Grid>
+                         
+                    </Grid>
+                             </StackLayout>
+                   <contr:RoundedCornerView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BindingContext.SelectedItemCommand, Source={x:Reference collectionList}}"   CommandParameter="{Binding .}"  />
+                    </contr:RoundedCornerView.GestureRecognizers>
+               </contr:RoundedCornerView>
+                           </Grid>
+                                </DataTemplate>    
+                            </CollectionView.ItemTemplate>    
+    
+            </CollectionView>  
+                       </StackLayout> 
+        
+            
+          </Grid>
+    </ContentPage.Content>
+</ContentPage>

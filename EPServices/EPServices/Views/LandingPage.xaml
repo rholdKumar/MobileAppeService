@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:contr="clr-namespace:EPServices.Controls"
+    x:Class="EPServices.Views.LandingPage" Title="WelCome to Emirates Properties" BackgroundColor="{StaticResource  PageBGColor}">
+    <ContentPage.Content>
+        <Grid RowSpacing="30" Padding="0,20,0,0">
+            <Grid.RowDefinitions>
+                  <RowDefinition Height="auto"/>
+                  <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="epLogo" Aspect="AspectFit"/>
+        <Grid Grid.Row="1" Padding="20,0,20,0" VerticalOptions="Center" RowSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                 <RowDefinition Height="auto"/>
+                 <RowDefinition Height="auto"/>
+                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                 <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="5*"/>
+                     <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                  <contr:RoundedCornerView   Grid.Column="0" HeightRequest="50" RowSpacing="5" BorderColor="Transparent"  FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10"  BackgroundColor="{StaticResource backgroungColor}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Login" VerticalTextAlignment="Center" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="login" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                     <contr:RoundedCornerView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </contr:RoundedCornerView.GestureRecognizers>
+                   </contr:RoundedCornerView>
+               <contr:RoundedCornerView   Grid.Column="1" HeightRequest="50" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10" BackgroundColor="{StaticResource backgroungColor}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Sign Up" VerticalTextAlignment="Center" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="user" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                     <contr:RoundedCornerView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+            </contr:RoundedCornerView.GestureRecognizers>
+                   </contr:RoundedCornerView>
+             
+            </Grid>
+                <contr:RoundedCornerView   Grid.Row="3" HeightRequest="50" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10"  BackgroundColor="{StaticResource backgroungColor}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                 <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Pay Utility Bill" VerticalTextAlignment="Center" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="payment" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                     <contr:RoundedCornerView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" />
+            </contr:RoundedCornerView.GestureRecognizers>
+                   </contr:RoundedCornerView>
+               <contr:RoundedCornerView   Grid.Row="4" HeightRequest="50" RowSpacing="5" BorderColor="Transparent" FillColor="{StaticResource backgroungColor}"  BorderWidth="1" BackgroundColor="Transparent"  RoundedCornerRadius="8">
+                        <Grid Padding="10"  BackgroundColor="{StaticResource backgroungColor}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                 <ColumnDefinition Width="40"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Pay Services Charges Without Login" VerticalTextAlignment="Center" Grid.Column="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                            <Image Grid.Column="1" Source="payment" Aspect="AspectFit" HorizontalOptions="End"/>
+                        </Grid>
+                     <contr:RoundedCornerView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4" />
+            </contr:RoundedCornerView.GestureRecognizers>
+                   </contr:RoundedCornerView>
+            
+        </Grid>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>
